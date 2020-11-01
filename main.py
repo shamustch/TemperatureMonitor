@@ -4,7 +4,7 @@ import subprocess
 
 window = tk.Tk()
 window.title("Temp Monitor")
-window.iconphoto(False, tk.PhotoImage(file='img/icon.png'))
+window.iconphoto(False, tk.PhotoImage(file='TemperatureMonitor/img/icon.png'))
 window.geometry("300x100")
 v = tk.StringVar()
 tk.Label(textvariable=v).pack(fill=tk.X,pady=5,padx=10)
