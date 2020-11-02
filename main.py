@@ -12,9 +12,9 @@ v = tk.StringVar()
 tk.Label(textvariable=v).pack(fill=tk.X,pady=5,padx=10)
 button = tk.Button(text='Exit',command=window.destroy).pack(fill=tk.X,pady=2,padx=10)
 def update_label():
-    tempcmd = ['hostname']##['vcgencmd','measure_temp']
+    tempcmd = ['vcgencmd','measure_temp']
     while 1:
-        v.set(subprocess.Popen( tempcmd, stdout=subprocess.PIPE ).communicate()[0])
+        v.set(subprocess.Popen(tempcmd,stdout=subprocess.PIPE ).communicate()[0])
         try:
             window.update()
         except tk.TclError:
